@@ -1,5 +1,5 @@
 # NWN Server CLI
-Using Beamdog's (serverlist API)[https://api.nwn.beamdog.net/v1/servers] this script allows for browsing and then directly connecting to a Neverwinter Nights Enhanced Edition server, as well as rotating and timestamping client logs. 
+Using Beamdog's [serverlist API](https://api.nwn.beamdog.net/v1/servers) this script allows for browsing and then directly connecting to a Neverwinter Nights Enhanced Edition server, as well as rotating and timestamping client logs. 
 
 ## Log Rotating
 Normally, the NWN client log is overriden every time the game is played. For those who play on NWN multiplayer servers, it is immensely useful to have an automatic log repository for making reports to the moderators or just to look back over. 
