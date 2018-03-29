@@ -3,7 +3,11 @@ nwndir=/<YOUR PATH>/linux-x86;
 nwnlogsdir=/<YOUR PATH>/'Neverwinter Nights'/logs
 nwnserver=""
 
-curl https://api.nwn.beamdog.net/v1/servers
+serverlist=$(curl -sS https://api.nwn.beamdog.net/v1/servers)
+echo $serverlist | jq -r '.[] .session_name'
+
+
+
 
 # pushd "$nwndir"
 # ./nwmain-linux +connect "$nwnserver" "$@"
