@@ -13,4 +13,7 @@ Requires `jq`.
 ## Todo
 * Fix discrepancy between 0 and 1 starting arrays
 * Error handling
+* Script find the directories automatically
 * Ability to pass a host:port argument and bypass the serverlist
+* Colorize & format logs
+
