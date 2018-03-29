@@ -1,6 +1,6 @@
 now=$(date +"%m_%d_%Y__%H:%M:%S")
-nwndir=/home/nsv/games/00829/bin/linux-x86;
-nwnlogsdir=/home/nsv/.local/share/'Neverwinter Nights'/logs
+nwndir=/<YOUR PATH>/linux-x86;
+nwnlogsdir=/<YOUR PATH>/'Neverwinter Nights'/logs
 nwnserver=""
 
 curl https://api.nwn.beamdog.net/v1/servers
