@@ -10,7 +10,7 @@ echo $nwnlogsdir
 
 # Check that jq is installed
 if ! [ -x "$(command -v jq)" ]; then
-  echo 'Error: git is not installed.' >&2
+  echo 'Error: jq is not installed.' >&2
   exit 1
 fi
 
