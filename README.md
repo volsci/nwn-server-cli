@@ -11,7 +11,6 @@ Direct connecting is purported to have a number of benefits for both the player 
 Requires `jq`.
 
 ## Todo
-* Fix discrepancy between 0 and 1 starting arrays
 * Error handling
 * Script finds the directories automatically
 * Ability to pass a host:port argument and bypass the serverlist
