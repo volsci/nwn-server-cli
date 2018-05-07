@@ -13,7 +13,7 @@ Requires `jq`.
 ## Todo
 * Error handling
 * Script finds the directories automatically
-* Ability to pass a host:port argument and bypass the serverlist
 * Colorize & format logs
 * Ditch jq, and rebuild as shell agnostic
+* Pass name of server as arg and fuzzy search??
 
