@@ -14,5 +14,6 @@ Requires `jq`.
 * Error handling
 * Colorize & format logs
 * Ditch jq, POSIX compliance
-* Pass name of server as arg and fuzzy search??
+* Search & select server by string argument
+* Unit tests, because why not, using shUnit2 (or other)
 
