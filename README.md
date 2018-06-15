@@ -1,4 +1,6 @@
 # NWN Server CLI
+[![Build Status](https://travis-ci.org/volsci/nwn-server-cli.svg?branch=master)](https://travis-ci.org/volsci/nwn-server-cli)
+
 Using Beamdog's [serverlist](https://nwn.beamdog.net) API, this script allows for browsing and then directly connecting to a Neverwinter Nights Enhanced Edition server, as well as rotating and timestamping client logs, all from the comfort of the terminal.
 
 ### Log Rotating
