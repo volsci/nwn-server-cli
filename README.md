@@ -13,9 +13,10 @@ Direct connecting is purported to have a number of benefits for both the player 
 Requires `jq`.
 
 ## Todo
-* Error handling
-* Colorize & format logs
-* Ditch jq, POSIX compliance
-* Search & select server by string argument
-* Unit tests, because why not, using shUnit2 (or other)
+- [ ] Error handling
+- [ ] Colorize & format logs
+- [ ] Ditch jq, POSIX compliance
+- [ ] Search & select server by string argument
+- [ ] Unit tests, because why not, using shUnit2 (or other)
+- [ ] Clean up & optimize code
 
