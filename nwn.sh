@@ -3,7 +3,7 @@
 now=$(date +"%m_%d_%Y__%H:%M:%S")
 nwndir='';
 nwnlogsdir='';
-address=""
+address='';
 
 # Check that jq is currently installed
 if ! [ -x "$(command -v jq)" ]; then
