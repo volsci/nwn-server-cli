@@ -1,12 +1,9 @@
 #!/bin/bash
 
 now=$(date +"%m_%d_%Y__%H:%M:%S")
-nwndir=$(find . -name "nwmain-linux" -exec dirname {} \;);
-nwnlogsdir=$(find . -name "nwclientLog1.txt" -exec dirname {} \;);
+nwndir='';
+nwnlogsdir='';
 address=""
-
-echo $nwndir
-echo $nwnlogsdir
 
 # Check that jq is currently installed
 if ! [ -x "$(command -v jq)" ]; then
@@ -27,11 +24,40 @@ if [ $# -eq 0 ]
         address=$1
 fi
 
-pushd "$nwndir"
-    ./nwmain-linux +connect "$address" "$@"
-popd
+# Navigate to the directory of the game and direct connect to supplied server 
+run_nwmain() {
+    pushd "$nwndir"
+        ./nwmain-linux +connect "$address" "$@"
+    popd
+}
 
-pushd "$nwnlogsdir"
-    cp nwclientLog1.txt $now
-popd
+# Handle incorrect file directory, prompt user for a new file path
+error_run_nwmain() {
+    echo 'Cannot find nwmain-linux in' $nwndir'. Please enter path:'
+    read path
+    nwndir=$path
+}
 
+# Duplicate the log file with timestamp 
+rotate_log() {
+    pushd "$nwnlogsdir"
+        cp nwclientLog1.txt $now
+    popd
+}
+
+# Handle incorrect file directory, prompt user for a new file path
+error_rotate_log() {
+    echo 'Cannot find nwclientLog1.txt in' $nwnlogsdir'. Please enter path:'
+    read path
+    nwnlogsdir=$path
+}
+
+# Prompt the user to enter the correct file path to nwmain until it is given
+until run_nwmain; do
+    error_run_nwmain
+done
+
+# Prompt the user to enter the correct file path to the logs until it is given
+until rotate_log; do
+    error_rotate_log
+done
